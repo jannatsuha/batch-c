@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         backgroundColor: Colors.purple,
         title:
-        Text("My Application"),
+        Text("My App"),
       ),
       body: Column(
         children: [
@@ -42,6 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
               setState(() {
                 btnText="Button Pressed";
               });
+              }
+          ),
+          RaisedButton(
+              child: Text(btnText),
+              color: Colors.lightGreen,
+              onPressed: (){
+                setState(() {
+                  btnText="Button Pressed";
+                });
               }
           )
         ],
