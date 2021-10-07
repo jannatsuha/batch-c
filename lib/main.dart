@@ -33,28 +33,35 @@ class _MyHomePageState extends State<MyHomePage> {
         title:
         Text("My App"),
       ),
-      body: Column(
-        children: [
-          RaisedButton(
-            child: Text(btnText),
-            color: Colors.lightGreen,
-              onPressed: (){
-              setState(() {
-                btnText="Button Pressed";
-              });
-              }
+      body:
+      SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 15,
+              ),
+              RaisedButton(
+                child: Text("Button One"),
+                  onPressed: (){
+
+              }),
+              Container(
+                  height: 200,
+                  width: 150,
+                  child: Image.network(
+                      "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg"
+                  )),
+              Container(
+                  height: 200,
+                  width: 150,
+                  child:
+                  Image.asset("assets/images/image1.jpg"),
+              ),
+            ],
           ),
-          RaisedButton(
-              child: Text(btnText),
-              color: Colors.lightGreen,
-              onPressed: (){
-                setState(() {
-                  btnText="Button Pressed";
-                });
-              }
-          )
-        ],
-      ),
+        ),
+      )
     );
   }
 }
